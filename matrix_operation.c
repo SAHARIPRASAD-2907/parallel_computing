@@ -23,14 +23,14 @@ printf("Enter %d elements of first matrix\n",rows*cols);
 for(i=0;i<rows;i++)
   for(j=0;j<cols;j++)
     {
-       scanf("%d",&a[i][j]);
+       a[i][j]=(rand() % (10)) + 1; 
     }
 
 printf("Enter %d elements of second matrix\n",rows*cols);
 for(i=0;i<rows;i++)
   for(j=0;j<cols;j++)
     {
-       scanf("%d",&b[i][j]);
+       b[i][j]=(rand() % (10)) + 1;
     }
 
 d=(int *)malloc(sizeof(int)*rows*cols);
@@ -99,7 +99,7 @@ s4=omp_get_wtime( );
 
  
 
-            printf("Sum of the %d row is = %d\n", i, sum);
+       //     printf("Sum of the %d row is = %d\n", i, sum);
 
             sum = 0;}
 }
@@ -128,7 +128,7 @@ s5=omp_get_wtime( );
 
  
 
-            printf("Sum of the %d column is = %d\n", j, sum);
+     //       printf("Sum of the %d column is = %d\n", j, sum);
 
             sum = 0;
 
@@ -140,7 +140,7 @@ s5=omp_get_wtime( );
 }
 e5=omp_get_wtime( );
 d5= e5-s5;
-
+/*
 printf("Values of Resultant Matrix ADDITION are as follows:\n");
 
 for(i=0;i<rows;i++)
@@ -148,7 +148,8 @@ for(i=0;i<rows;i++)
     {
        printf("Value of C1[%d][%d]=%d\n",i,j,c1[i][j]);
     }
-
+   */
+/*
 printf("Values of Resultant Matrix SUBTRACTION are as follows:\n");
 
 for(i=0;i<rows;i++)
@@ -156,13 +157,14 @@ for(i=0;i<rows;i++)
     {
        printf("Value of C2[%d][%d]=%d\n",i,j,c2[i][j]);
     }
-printf("Values of Resultant Matrix MULTIPLICATION are as follows:\n");
+  */  
+/*printf("Values of Resultant Matrix MULTIPLICATION are as follows:\n");
 
 for(i=0;i<rows;i++)
   for(j=0;j<cols;j++)
     {
        printf("Value of C3[%d][%d]=%d\n",i,j,c3[i][j]);
-    }
+    }*/
 printf("the time taken to calulate matrix addition %f \n", d1);
 printf("the time taken to calculate matrix subtraction %f \n", d2);
 printf("the time taken to calculate matrix multiplication is %f \n", d3);
